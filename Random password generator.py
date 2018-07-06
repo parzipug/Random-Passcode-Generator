@@ -1,12 +1,30 @@
 import time
 import random
 
+def whitespace(x):
+    
+    for i in range(x):
+        print("\n")
+        
+
+def normalspace(x):
+
+    for i in range(x):
+        whitespace(1)
+        time.sleep(.8)
+        
+
 def passcode_generator():
     
-    print("<<<random password generator>>>")
-    time.sleep(1)
+    print("<<< Random password generator. >>>")
+    normalspace(1)
+    
     length = int(input("How long would you like your password to be? >>> "))
+    normalspace(1)
+    
     times = int(input("How many passwords would you like? >>> "))
+    normalspace(1)
+    
     alphabet = "abcdefghijklmnopqrstuvwxyz"
     passcode = ' '
     amount_of_passwords = (0)
@@ -21,8 +39,7 @@ def passcode_generator():
             passcode += random.choice(alphabet)
         
            
-        print("<<<here is your " + "random password " + str(amount_of_passwords) + " >>>")
-        time.sleep(.8)
+        print("<<< Here is your " + "random password " + str(amount_of_passwords) + ". >>>")
         
         print(passcode)
         passcode = ' '
